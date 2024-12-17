@@ -38,12 +38,7 @@ export const upgrades = [
                 name: "3x clicker",
                 description: "triple your clicking power",
                 multiplier: 3,
-            },
-        {
-            name: "2x clicker",
-            description: "double your clicking power",
-            multiplier: 2,
-        },
+            }
         ],
 
         gemMultiplier: 1.025,
@@ -67,12 +62,7 @@ export const upgrades = [
                 name: "3x pickaxe",
                 description: "triple your pickaxe efficiency",
                 multiplier: 3,
-            },
-        {
-            name: "2x pickaxe",
-            description: "double your pickaxe efficiency",
-            multiplier: 2,
-        },
+            }
         ],
         power: 0,
         gemMultiplier: 1.03,
@@ -95,12 +85,7 @@ export const upgrades = [
                 name: "3x miner",
                 description: "triple your miner efficiency",
                 multiplier: 3,
-            },
-        {
-            name: "2x miner",
-            description: "double your miner efficiency",
-            multiplier: 2,
-        }],
+            }],
         power: 0,
         gemMultiplier: 1.035,
         costMultiplier: 1.11,
@@ -122,12 +107,7 @@ export const upgrades = [
             name: "3x factory",
             description: "triple your factory efficiency",
             multiplier: 3,
-        },
-    {
-        name: "2x factory",
-        description: "double your factory efficiency",
-        multiplier: 2,
-    }],
+        }],
     power: 0,
     gemMultiplier: 1.04,
     costMultiplier: 1.10,
@@ -148,17 +128,12 @@ export const upgrades = [
             name: "3x potion",
             description: "triple your potion efficiency",
             multiplier: 3,
-        },
-    {
-        name: "2x potion",
-        description: "double your potion efficiency",
-        multiplier: 2,
-    }],
+        }],
     power: 0,
     gemMultiplier: 1.08,
     costMultiplier: 1.096,
 },
 ]
 
- export const powerUpIntervals = [10, 20, 30, 50, 70, 100, 150, 200, 250, 300]
+ export const powerUpIntervals = [10, 20, 30, 50, 70]
 

@@ -71,14 +71,15 @@ function buyUpgrade(upgrade) {
 
         gem.innerHTML = Math.round(parsedGem -= mu.parsedCost);
 
-        let index = powerUpIntervals.indexOf(parseFloat(mu.level.innerHTML))
-
+        let index = getIndex(mu)
+        
         if ( index !== -1 ){
             upgradeDiv.style.cssText = `border-color: white`;
             nextLevelDiv.style.cssText = `background-color: #5a5959; font-weight: normal`;
             mu.cost.innerHTML = Math.round(mu.parsedCost *= mu.costMultiplier)
 
             if( mu.name === 'clicker'){
+                
                 gpc *= mu.powerUps[index].multiplier
                 nextLevelP.innerHTML = `+${mu.parsedIncrease} gems per click`
             }else{
@@ -89,10 +90,11 @@ function buyUpgrade(upgrade) {
         }
 
         mu.level.innerHTML ++
-
-        index = powerUpIntervals.indexOf(parseFloat(mu.level.innerHTML))
+        
+        index = getIndex(mu)
 
         if ( index !== -1 ) {
+                console.log(mu.powerUps[index], index);
             upgradeDiv.style.cssText = `border-color: orange`;
             nextLevelDiv.style.cssText = `background-color: #CC4500; font-weight: bold`;
             nextLevelP.innerText = mu.powerUps[index].description
@@ -117,6 +119,22 @@ function buyUpgrade(upgrade) {
     }
 }
 
+function getIndex(mu){
+let index
+    let level=parseFloat(mu.level.innerHTML)
+    if (level<100){
+
+        index = powerUpIntervals.indexOf(level)%2
+
+    }else if(level % 50 === 0){
+        index = level / 50% 2
+    }
+    else
+    {
+        index = -1
+    }
+    return index
+}
 function save () {
     localStorage.clear()
 
