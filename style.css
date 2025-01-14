@@ -247,3 +247,11 @@ body{
 ::-webkit-scrollbar-thumb:hover{
     background: #555;
 }
+
+@media (max-width: 375px) and (max-height: 628px) {
+    .body {
+        width: 90vw;
+        padding: 2vh 2vw;
+        border: 1px white solid;
+    }
+}
